@@ -1,0 +1,15 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      python: 3.9
+    commands:
+      # Install dependencies, e.g., boto3
+      - pip install boto3
+  build:
+    commands:
+      # Run the deploy script to deploy Glue jobs
+      - python deploy_glue_jobs.py
+artifacts:
+  files:
+    - '**/*'  # Include all files in the build output (optional)
