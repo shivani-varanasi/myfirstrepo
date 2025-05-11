@@ -9,7 +9,7 @@ phases:
   build:
     commands:
       # Run the deploy script to deploy Glue jobs
-      - python scripts/test-job.py
+      - python deploy_glue_jobs.py
 artifacts:
   files:
     - '**/*'  # Include all files in the build output (optional)
